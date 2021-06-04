@@ -5,9 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh """
-                    apt update
-                    apt install nginx
-                    systemctl status nginx
+                    cp index.html /var/www/html
                 """
             }
         }
