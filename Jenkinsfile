@@ -4,7 +4,11 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building from master..'
+                sh """
+                    sudo apt update
+                    sudo apt install nginx
+                    sudo systemctl status nginx
+                """
             }
         }
         stage('Test') {
