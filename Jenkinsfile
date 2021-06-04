@@ -5,9 +5,9 @@ pipeline {
         stage('Build') {
             steps {
                 sh """
-                    sudo apt update
-                    sudo apt install nginx
-                    sudo systemctl status nginx
+                    apt update
+                    apt install nginx
+                    systemctl status nginx
                 """
             }
         }
